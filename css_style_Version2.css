@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --color-bg: #121212;
+  --color-card: #1c1c1c;
+  --color-accent: #00fff7;
+  --color-neon: #ff00c8;
+  --color-text: #eee;
+  --color-btn: #222;
+  --font-strong: 'Montserrat', 'Roboto', sans-serif;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 0 8px 0;
+  background: linear-gradient(90deg, #1c1c1c 60%, #212125 100%);
+  border-bottom: 3px solid var(--color-neon);
+}
+.logo {
+  font-family: var(--font-strong);
+  font-size: 3rem;
+  color: var(--color-accent);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 0 0 16px var(--color-neon), 0 2px 4px #0009;
+  margin-bottom: 12px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 32px;
+}
+nav a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: var(--color-text);
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: var(--color-neon);
+  text-shadow: 0 0 3px var(--color-neon);
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.catalogo h2 {
+  font-family: var(--font-strong);
+  font-size: 2rem;
+  color: var(--color-neon);
+  margin-bottom: 24px;
+  text-align: center;
+  text-shadow: 0 0 8px var(--color-neon);
+}
+
+.productos {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+.producto {
+  background: var(--color-card);
+  border-radius: 14px;
+  box-shadow: 0 0 14px #111c, 0 0 0 2px var(--color-accent);
+  width: 230px;
+  padding: 18px 14px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: transform .15s, box-shadow .2s;
+}
+.producto:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 0 28px var(--color-neon), 0 0 0 2px var(--color-neon);
+}
+.producto img {
+  width: 120px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+.producto h3 {
+  font-size: 1.2rem;
+  margin: 9px 0 3px 0;
+  color: var(--color-accent);
+  font-family: var(--font-strong);
+  text-shadow: 0 0 2px var(--color-neon);
+}
+.producto .precio {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  margin-bottom: 7px;
+}
+.agregar-carrito {
+  background: var(--color-btn);
+  color: var(--color-neon);
+  border: 2px solid var(--color-neon);
+  border-radius: 6px;
+  padding: 7px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: var(--font-strong);
+  letter-spacing: 1px;
+  transition: background .2s, color .2s;
+  box-shadow: 0 0 8px var(--color-accent);
+}
+.agregar-carrito:hover {
+  background: var(--color-neon);
+  color: var(--color-bg);
+  box-shadow: 0 0 16px var(--color-neon);
+}
+
+.carrito {
+  background: var(--color-card);
+  border-radius: 12px;
+  box-shadow: 0 0 10px #131;
+  padding: 18px;
+  margin: 0 auto 28px auto;
+  max-width: 300px;
+}
+.carrito h2 {
+  color: var(--color-neon);
+  margin-bottom: 15px;
+  text-align: center;
+}
+.carrito-lista {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 12px;
+}
+.carrito-lista li {
+  border-bottom: 1px solid #6664;
+  padding: 6px 0;
+  color: var(--color-accent);
+  font-size: 0.98rem;
+  display: flex;
+  justify-content: space-between;
+}
+.carrito-total {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--color-neon);
+  margin-bottom: 8px;
+  text-align: right;
+}
+#vaciar-carrito {
+  background: var(--color-neon);
+  color: var(--color-card);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-family: var(--font-strong);
+  font-size: 0.95rem;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 0 8px var(--color-accent);
+}
+#vaciar-carrito:hover {
+  background: var(--color-accent);
+  color: var(--color-neon);
+  box-shadow: 0 0 16px var(--color-neon);
+}
+
+.contacto h2 {
+  color: var(--color-accent);
+  margin-bottom: 16px;
+  font-family: var(--font-strong);
+}
+
+.contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 330px;
+  background: var(--color-card);
+  padding: 18px 22px;
+  border-radius: 12px;
+  margin: 0 auto;
+}
+
+.contacto input,
+.contacto textarea {
+  background: #191921;
+  color: var(--color-text);
+  border: 1.5px solid var(--color-neon);
+  border-radius: 6px;
+  padding: 7px;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  resize: vertical;
+}
+.contacto button[type="submit"] {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border: none;
+  border-radius: 6px;
+  padding: 8px 0;
+  font-size: 1rem;
+  font-family: var(--font-strong);
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: background .2s, color .2s;
+  margin-top: 8px;
+  box-shadow: 0 0 8px var(--color-accent);
+}
+.contacto button[type="submit"]:hover {
+  background: var(--color-neon);
+  color: var(--color-card);
+}
+.mensaje-enviado {
+  color: var(--color-accent);
+  text-align: center;
+  margin: 18px 0 0 0;
+  font-family: var(--font-strong);
+  font-size: 1.1rem;
+  transition: .3s;
+}
+
+footer {
+  background: #191921;
+  border-top: 2px solid var(--color-accent);
+  padding: 30px 0 10px 0;
+  text-align: center;
+}
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 10px;
+}
+.footer-social a img {
+  width: 28px;
+  filter: invert(60%) drop-shadow(0 0 8px var(--color-accent));
+  transition: filter .2s;
+}
+.footer-social a:hover img {
+  filter: invert(100%) drop-shadow(0 0 16px var(--color-neon));
+}
+footer p {
+  color: var(--color-text);
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .productos {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  main {
+    padding: 16px 5px;
+  }
+  .carrito {
+    padding: 12px;
+    max-width: 98vw;
+  }
+}
